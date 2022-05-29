@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx		= 12;		/* gaps */
+static const unsigned int gappx		= 8;		/* gaps */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -12,7 +12,8 @@ static const char col_gray1[]       = "#051018";
 static const char col_gray2[]       = "#091e2d";
 static const char col_gray3[]       = "#ffffff";
 static const char col_gray4[]       = "#f0f0f0";
-static const char col_cyan[]        = "#a4b9ef";
+//static const char col_cyan[]      = "#a4b9ef";
+static const char col_cyan[]        = "#ebddaa";
 //static const char col_cyan[]      = "#C6AAE8";
 //static const char col_cyan[]		= "#E07983";
 static const char *colors[][3]      = {
