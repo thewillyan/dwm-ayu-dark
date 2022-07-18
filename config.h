@@ -2,14 +2,15 @@
 #include <X11/XF86keysym.h>
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx		= 8;		/* gaps */
-static const unsigned int snap      = 0;       /* snap pixel */
+static const unsigned int gappx			= 6;				/* gaps */
+static const unsigned int snap      = 32;				/* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "iosevka-semibold:size=10" };
 static const char dmenufont[]       = "iosevka-medium:size=10";
 static const char col_gray1[]       = "#051018";
-static const char col_gray2[]       = "#091e2d";
+static const char col_gray2[]       = "#585B70";
+//static const char col_gray2[]       = "#091e2d";
 static const char col_gray3[]       = "#ffffff";
 static const char col_gray4[]       = "#f0f0f0";
 //static const char col_cyan[]      = "#a4b9ef";
@@ -67,6 +68,7 @@ static const char *termcmd[]  = { "urxvt", NULL };
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *mutemic[] = { "/usr/bin/pactl", "set-source-mute", "1", "toggle",	NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -74,8 +76,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_c,      spawn,          {.v = clipmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ 0,                       XF86XK_AudioMute, 				spawn, {.v = mutevol } },
+	{ 0,                       XF86XK_AudioMicMute, 		spawn, {.v = mutemic } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
