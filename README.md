@@ -2,18 +2,18 @@
 My simple [dwm](https://dwm.suckless.org/) customization using the
 [ayu-theme](https://github.com/ayu-theme) color pallete.
 
-# Overview
+## Overview
 ![Screenshot 1](https://raw.githubusercontent.com/thewillyan/dwm-ayu-dark/main/img/screenshot1.png)
 ![Screenshot 2](https://raw.githubusercontent.com/thewillyan/dwm-ayu-dark/main/img/screenshot2.png)
 
-# Install
+## Install
 <details>
 <summary><b>Simple build guide</b></summary>
 
 This isn't a tutorial, so take care and use your knowledge to make
 your own decisions.
 
-## Dependencies
+### Dependencies
 - make
 - dmenu
 - urxvt
@@ -22,7 +22,7 @@ your own decisions.
 - Iosevka Slab Font
 - Font Awesome
 
-## Build
+### Build
 To compile the project run:
 
 ```sh
@@ -33,6 +33,6 @@ Execute the `dwm_bar.sh` script to activate the custom bar. You can add the scri
 `.xinitrc` to auto launch it when dwm starts.
 </details>
 
-# Credits
+## Credits
 **©** [Wallpaper](https://raw.githubusercontent.com/thewillyan/dwm-ayu-dark/main/img/ayu-dark-navi.png)
 made by me.
