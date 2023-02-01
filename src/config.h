@@ -64,11 +64,11 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray1, NULL };
 static const char *clipmenucmd[] = { "clipmenu", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray1, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
-static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
-static const char *mutemic[] = { "pactl", "set-source-mute", "1", "toggle",	NULL };
 static const char *browser[] = { "firefox", NULL };
+static const char *upvol[]   = { "pamixer", "-i", "5", NULL };
+static const char *downvol[] = { "pamixer", "-d", "5", NULL };
+static const char *mutevol[] = { "pamixer", "-t", NULL };
+static const char *mutemic[] = { "pamixer", "--default-source", "-t", NULL };
 
 
 static Key keys[] = {
